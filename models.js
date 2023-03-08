@@ -14,7 +14,7 @@ async function GPT3_request(prompt) {
         }),
     });
     const json_response = await response.json();
-    return prompt+json_response["choices"][0]["text"];
+    return json_response["choices"][0]["text"];
   }
 
 async function chatGPT_request(prompt) {
@@ -33,7 +33,7 @@ async function chatGPT_request(prompt) {
         }),
     });
     const json_response = await response.json();
-    return prompt+json_response["choices"][0].message.content;
+    return json_response["choices"][0].message.content;
   }
   
 async function GPT2_request(prompt) {
@@ -49,7 +49,7 @@ async function GPT2_request(prompt) {
         }),
     });
     const json_response = await response.json();
-    return json_response[0]["generated_text"];
+    return json_response[0]["generated_text"].substr(prompt.length);
 }
 
 async function runModel(prompt, model){

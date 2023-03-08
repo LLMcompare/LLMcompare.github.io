@@ -15,12 +15,12 @@ async function update_response(){
         return;
     }
     localStorage.setItem("apikey",apikey);
-    response_area.innerHTML = ""
     models =  ["GPT2","GPT3","ChatGPT"];
     for(var i = 0; i<3;i++){
         model_name=models[i];
-        model_response = await runModel(prompt_area.value,model_name);
-        response_area.innerHTML += `<h5>${model_name}</h5><pre>${model_response}</pre>`
+        prompt_text = prompt_area.value;
+        model_response = await runModel(prompt_text,model_name);
+        document.getElementById("response"+i).innerHTML = `<h3>${model_name}</h3><pre><b>${prompt_text}</b>${model_response}</pre>`
     }
 }
 

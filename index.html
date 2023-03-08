@@ -2,15 +2,19 @@
     <head>
         <script src="models.js"></script>
         <link rel="stylesheet" href="style.css">
+        <title>LLM Comparison Tool</title>
+        <link rel="shortcut icon" type="image/x-icon" href="cerilogo.png" />
+
     </head>
     <body>
-        <h3>OpenAI API Key:</h1>
-        <input type="text" id="apikey"/>
-        <h3>Enter your promt:</h1>
+        <h2>LLM Comparison Tool</h2>
+        <p>OpenAI API Key: <input type="text" id="apikey"/></p>
+        
+        <p>Enter your promt:</p>
         <textarea id="prompt_area" rows="10" cols="50">Hello! Please calculate two plus two:
 
 
-        </textarea>
+</textarea>
         <!-- <h3>Choose your model:</h3> -->
         <!-- <select name="model" id="model">
             <option value="GPT2">GPT2</option>
@@ -20,8 +24,14 @@
         <br/>
         <br/>
         <button class="button" id="submit_button">Generate responses</button>
-        <div id="response"></div>
-        
+        <div id="response">
+            <div class="response-item" id="response0"><h3>GPT2</h3></div>
+            <div class="response-item" id="response1"><h3>GPT3</h3></div>
+            <div class="response-item" id="response2"><h3>ChatGPT</h3></div>
+        </div>
         <script src="form.js"></script>
     </body>
+    <footer>
+            <a id="cerilink" href="https://www.camxrisk.org/"><img src="cerilogo.png" height="50px"/><span>CERI</span></a>
+    </footer>
 </html>

@@ -9,6 +9,43 @@ body {
     background-attachment: fixed;
 }
 
+h3 {
+  font-size: large;
+}
+
+footer {
+  position: fixed;
+  bottom: 20px;
+}
+
+#cerilink {
+  text-decoration: none;
+}
+
+#cerilink * {
+  vertical-align: middle;
+  display: inline;
+  font-size: 40px;
+  color:#505050;
+  text-decoration: none;
+}
+
+#response {
+  display:flex;
+  flex-direction: row
+}
+
+.response-item {
+  border-right: 1px solid;
+  padding: 10px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.response-item b {
+  background: #d9ffd9;
+}
+
 .button {
   background-color: rgba(51, 51, 51, 0.05);
   border-radius: 8px;
@@ -17,7 +54,7 @@ body {
   cursor: pointer;
   display: inline-block;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 24px;
+  font-size: large;
   font-weight: 500;
   line-height: 20px;
   list-style: none;

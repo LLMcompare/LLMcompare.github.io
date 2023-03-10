@@ -1,37 +1,57 @@
 <html>
-    <head>
-        <script src="models.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <title>LLM Comparison Tool</title>
-        <link rel="shortcut icon" type="image/x-icon" href="cerilogo.png" />
 
-    </head>
-    <body>
-        <h2>LLM Comparison Tool</h2>
-        <p>OpenAI API Key: <input type="text" id="apikey"/></p>
-        
-        <p>Enter your promt:</p>
-        <textarea id="prompt_area" rows="10" cols="50">Hello! Please calculate two plus two:
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="models.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>LLM Comparison Tool</title>
+    <link rel="shortcut icon" type="image/x-icon" href="cerilogo.png" />
+
+</head>
+
+<body>
+    <h2>LLM Comparison Tool</h2>
+    <p>OpenAI API Key: <input type="text" id="apikey" /></p>
+    <p>HF GPT2 Endpoint: <input type="text" id="hfurl" /></p>
+
+    <p>Enter your promt:</p>
+    <textarea id="prompt_area" rows="10" cols="50">Hello! Please calculate two plus two:
 
 
 </textarea>
-        <!-- <h3>Choose your model:</h3> -->
-        <!-- <select name="model" id="model">
+    <!-- <h3>Choose your model:</h3> -->
+    <!-- <select name="model" id="model">
             <option value="GPT2">GPT2</option>
             <option value="GPT3">GPT3</option>
             <option value="ChatGPT">ChatGPT</option>
         </select> -->
-        <br/>
-        <br/>
-        <button class="button" id="submit_button">Generate responses</button>
-        <div id="response">
-            <div class="response-item" id="response0"><h3>GPT2</h3></div>
-            <div class="response-item" id="response1"><h3>GPT3</h3></div>
-            <div class="response-item" id="response2"><h3>ChatGPT</h3></div>
+    <br />
+    <br />
+    <button class="button" id="submit_button">Generate responses</button>
+    <div id="models">
+        <div class="model">
+            <h3>GPT2</h3>
+            <p>Temperature: <input type="range" min="0.1" max="10" value="1" step="0.1" class="tempslider"><span class="temp">1</span></p>
+            <p>Max tokens: <input type="range" min="1" max="100" value="30" class="tokensslider"><span class="temp">30</span></p>
+            <pre class="result"></pre>
         </div>
-        <script src="form.js"></script>
-    </body>
-    <footer>
-            <a id="cerilink" href="https://www.camxrisk.org/"><img src="cerilogo.png" height="50px"/><span>CERI</span></a>
-    </footer>
+        <div class="model">
+            <h3>GPT3</h3>
+            <p>Temperature: <input type="range" min="0" max="2" value="1" step="0.1" class="tempslider"><span class="temp">1</span></p>
+            <p>Max tokens: <input type="range" min="1" max="100" value="30" class="tokensslider"><span class="temp">30</span></p>
+            <pre class="result"></pre>
+        </div>
+        <div class="model">
+            <h3>ChatGPT</h3>
+            <p>Temperature: <input type="range" min="0" max="2" value="1" step="0.1" class="tempslider"><span class="temp">1</span></p>
+            <p>Max tokens: <input type="range" min="1" max="100" value="30" class="tokensslider"><span class="temp">30</span></p>
+            <pre class="result"></pre>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+<footer>
+    <a id="cerilink" href="https://www.camxrisk.org/"><img src="cerilogo.png" height="50px" /><span>CERI</span></a>
+</footer>
+
 </html>

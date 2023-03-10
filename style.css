@@ -30,19 +30,19 @@ footer {
   text-decoration: none;
 }
 
-#response {
+#models {
   display:flex;
   flex-direction: row
 }
 
-.response-item {
+.model {
   border-right: 1px solid;
   padding: 10px;
   flex-grow: 1;
   flex-basis: 0;
 }
 
-.response-item b {
+.model b {
   background: #d9ffd9;
 }
 

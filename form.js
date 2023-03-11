@@ -19,7 +19,8 @@ async function update_response(){
     localStorage.setItem("hfurl",hfurl);
 
     $(".model").each(async (i,modeldiv) => {
-        let model_name = $(modeldiv).find("h3").text();
+        heading = $(modeldiv).find("h3");
+        let model_name = heading[0].id;
         let prompt_text = $("#prompt_area").val();
         let temperature = Number($(modeldiv).find(".tempslider").val());
         let max_tokens = Number($(modeldiv).find(".tokensslider").val());
